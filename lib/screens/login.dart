@@ -14,6 +14,8 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   bool _displayPassword = false;
+  late String _username;
+  late String _password;
 
   void setPasswordVisibility() {
     setState(() {
@@ -29,24 +31,24 @@ class _LoginState extends State<Login> {
         children: [
           Expanded(
             child: SafeArea(
-              child: Center(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    const Column(
-                      mainAxisSize: MainAxisSize.min,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
+                        const Text(
                           'Sign in now',
                           style: TextStyle(
                             fontSize: 26.0,
                             fontWeight: FontWeight.w600,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 6.0,
                         ),
-                        Text(
+                        const Text(
                           'Please sign in to continue',
                           style: TextStyle(
                             fontSize: 16.0,
@@ -54,17 +56,18 @@ class _LoginState extends State<Login> {
                             color: Color(0xff7D848D)
                           ),
                         ),
-                      ],
-                    ),
-                    Column(
-                      children: [
                         SizedBox(height: 40.0),
-                        const Padding(
+                        Padding(
                           padding: EdgeInsets.symmetric(horizontal: 18.0),
                           child: SizedBox(
                             height: 56.0,
                             child: TextField(
-                              decoration: InputDecoration(
+                              onChanged: (value) {
+                                setState(() {
+                                  _username = value;
+                                });
+                              },
+                              decoration: const InputDecoration(
                                 filled: true,
                                 fillColor: Color(0xffF7F7F9),
                                 border: OutlineInputBorder(
@@ -111,6 +114,11 @@ class _LoginState extends State<Login> {
                                   children: [
                                     Expanded(
                                       child: TextField(
+                                        onChanged: (value) {
+                                          setState(() {
+                                            _password = value;
+                                          });
+                                        },
                                         obscureText: !_displayPassword,
                                         decoration: const InputDecoration(
                                           border: InputBorder.none,
@@ -198,31 +206,46 @@ class _LoginState extends State<Login> {
                           ),
                         ),
                         const SizedBox(height: 15.0),
-                        Text('Or sign in with'),
-                        // Center(
-                        //   child: Row(
-                        //     children: [
-                        //       Image.asset(
-                        //         width: 44.0,
-                        //         'lib/images/sc_fb.png'
-                        //       ),
-                        //       Image.asset(
-                        //         width: 44.0,
-                        //         'lib/images/sc_fb.png'
-                        //       ),
-                        //       Image.asset(
-                        //         width: 44.0,
-                        //         'lib/images/sc_fb.png'
-                        //       ),
-                        //     ],
-                        //   ),
-                        // )
-                        
+                        const Text('Or sign in with'),
                       ],
-                    )
-                  ],
-                ),
-              )
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          print('facebook');
+                        },
+                        child: Image.asset(
+                          width: 44.0,
+                          'lib/images/sc_fb.png'
+                        ),
+                      ),
+                      const SizedBox(width: 20.0),
+                      GestureDetector(
+                        onTap: () {
+                          print('instagram');
+                        },
+                        child: Image.asset(
+                          width: 44.0,
+                          'lib/images/sc_ig.png'
+                        ),
+                      ),
+                      const SizedBox(width: 20.0),
+                      GestureDetector(
+                        onTap: () {
+                          print('twitter');
+                        },
+                        child: Image.asset(
+                          width: 44.0,
+                          'lib/images/sc_tw.png'
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             )
           )
         ],
