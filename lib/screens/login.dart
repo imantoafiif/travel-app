@@ -14,8 +14,8 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   bool _displayPassword = false;
-  late String _username;
-  late String _password;
+  late String? _username;
+  late String? _password;
 
   void setPasswordVisibility() {
     setState(() {
@@ -171,7 +171,12 @@ class _LoginState extends State<Login> {
                             width: double.infinity,
                             height: 56.0,
                             child: ElevatedButton(
-                              onPressed: () {}, 
+                              onPressed: () {
+                                if(_username == null || _password == null) {
+                                  return;
+                                }
+                                print('$_username $_password');
+                              }, 
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Color(0xff0D6EFD),
                                 foregroundColor: Colors.white,
