@@ -25,7 +25,7 @@ class _LandingScreenState extends State<LandingScreen> {
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: Colors.red,
+                  // color: Colors.red,
                 ),
                 child: Column(
                   children: [
@@ -33,16 +33,48 @@ class _LandingScreenState extends State<LandingScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
                         Container(
-                          child: const Row(
+                          padding: EdgeInsets.all(6.0),
+                          decoration: BoxDecoration(
+                            color: Color(0xffF7F7F9),
+                            borderRadius: BorderRadius.circular(50.0),
+                          ),
+                          child: Row(
                             children: <Widget>[
-                              CircleAvatar(
-                                radius: 50.0,
+                              ClipOval(
+                                child: Image.asset(
+                                  'lib/images/profile.png',
+                                  width: 37.0,
+                                  height: 37.0,
+                                ),
                               ),
-                              Text('Afiif Imanto')
+                              SizedBox(width: 8.0),
+                              Text(
+                                'Imanto',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 14.0,
+                                ),
+                              ),
+                              SizedBox(width: 8.0)
                             ],
                           ),
                         ),
-                        const Text('text')
+                        GestureDetector(
+                          onTap: () {
+                            print('rumlow');
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Color(0xffF7F7F9),
+                              borderRadius: BorderRadius.circular(50.0)
+                            ),
+                            height: 44.0,
+                            width: 44.0,
+                            child: Center(
+                              child: Icon(Icons.notification_add_outlined),
+                            ),
+                          ),
+                        )
                       ],
                     ),
                     Expanded(
@@ -71,7 +103,7 @@ class _LandingScreenState extends State<LandingScreen> {
                   print('rumlow');
                 },
                 child: Container(
-                  color: Colors.tealAccent,
+                  // color: Colors.tealAccent,
                   child: const Center(
                     child: Text('data'),
                   ),
@@ -84,7 +116,7 @@ class _LandingScreenState extends State<LandingScreen> {
                   print('rumlow');
                 },
                 child: Container(
-                  color: Colors.brown,
+                  // color: Colors.brown,
                   child: const Center(
                     child: Text('data'),
                   ),
@@ -97,7 +129,7 @@ class _LandingScreenState extends State<LandingScreen> {
                   print('rumlow');
                 },
                 child: Container(
-                  color: Colors.blueAccent,
+                  // color: Colors.blueAccent,
                   child: const Center(
                     child: Text('data'),
                   ),

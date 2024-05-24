@@ -26,6 +26,10 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
+
+    void emulateSignIn() {
+    }
+
     return Scaffold(
       body: Column(
         children: [
@@ -175,7 +179,8 @@ class _LoginState extends State<Login> {
                                 if(_username == null || _password == null) {
                                   return;
                                 }
-                                print('$_username $_password');
+                                Navigator.pushNamedAndRemoveUntil(context, '/landing-screen', (route) => false);
+                                // Navigator.pushNamed(context, '/landing-screen');
                               }, 
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Color(0xff0D6EFD),

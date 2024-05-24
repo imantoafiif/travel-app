@@ -19,10 +19,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LandingScreen(),
+      home: const Intro(),
       routes: {
         '/intro' : (context) => const Intro(),
         '/login' : (context) => const Login(),
+        '/landing-screen' : (context) => const LandingScreen(),
       },
     );
   }
