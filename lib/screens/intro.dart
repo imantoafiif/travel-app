@@ -30,7 +30,8 @@ class _IntroState extends State<Intro> with TickerProviderStateMixin {
 
   void onSetPage() {
     if (_tabController.index == _banners.length - 1) {
-      Navigator.pushNamed(context, '/login');
+      // Navigator.pushNamed(context, '/login');
+      Navigator.pushNamedAndRemoveUntil(context, '/login', (route) => false);
     } else {
       _tabController.index += 1;
     }

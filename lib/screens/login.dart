@@ -179,8 +179,8 @@ class _LoginState extends State<Login> {
                                 if(_username == null || _password == null) {
                                   return;
                                 }
-                                Navigator.pushNamedAndRemoveUntil(context, '/landing-screen', (route) => false);
-                                // Navigator.pushNamed(context, '/landing-screen');
+                                Navigator.pushNamedAndRemoveUntil(context, '/home', (route) => false);
+                                // Navigator.pushNamed(context, '/home');
                               }, 
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Color(0xff0D6EFD),

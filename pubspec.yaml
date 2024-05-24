@@ -70,6 +70,9 @@ flutter:
     - lib/images/sc_tw.png
     - lib/images/splash_logo.png
     - lib/images/profile.png
+    - lib/images/location_thumb.png
+    - lib/images/search.png
+    - lib/images/tagline_decor.png
     # - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
