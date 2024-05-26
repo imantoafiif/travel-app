@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './screens/intro.dart';
 import './screens/login.dart';
 import './screens/home.dart';
+import 'screens/search.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         '/intro' : (context) => const Intro(),
         '/login' : (context) => const Login(),
         '/home' : (context) => const Home(),
+        '/search': (context) => const Search(),
       },
     );
   }

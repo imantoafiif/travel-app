@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.6
   smooth_page_indicator: ^1.1.0
   flutter_native_splash: ^2.4.0
+  scroll_snap_list: ^0.9.1
 
 dev_dependencies:
   flutter_test:
@@ -73,6 +74,10 @@ flutter:
     - lib/images/location_thumb.png
     - lib/images/search.png
     - lib/images/tagline_decor.png
+    - lib/images/chat.png
+    - lib/images/calendar.png
+    - lib/images/home.png
+    - lib/images/user.png
     # - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
