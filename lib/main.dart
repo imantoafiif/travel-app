@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app/screens/home_page.dart';
 import './screens/intro.dart';
 import './screens/login.dart';
 import './screens/home.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
+      // home: HomePage(),
       home: const Intro(),
       routes: {
         '/intro' : (context) => const Intro(),
