@@ -11,6 +11,61 @@ class Search extends StatefulWidget {
 }
 
 class _SearchState extends State<Search> {
+  final List<card.Card> _cards = [
+    const card.Card(
+      name: 'Nilandri Reservoir',
+      location: 'Palembang',
+      price: '891',
+      image: 'lib/images/location_thumb.png',
+    ),
+    const card.Card(
+      name: 'Nilandri Reservoir',
+      location: 'Jakarta',
+      price: '891',
+      image: 'lib/images/location_thumb.png',
+    ),
+    const card.Card(
+      name: 'Nilandri Reservoir',
+      location: 'D.I Yogyakarta',
+      price: '891',
+      image: 'lib/images/location_thumb.png',
+    ),
+    const card.Card(
+      name: 'Nilandri Reservoir',
+      location: 'Palembang',
+      price: '891',
+      image: 'lib/images/location_thumb.png',
+    ),
+    const card.Card(
+      name: 'Nilandri Reservoir',
+      location: 'Palembang',
+      price: '891',
+      image: 'lib/images/location_thumb.png',
+    ),
+    const card.Card(
+      name: 'Nilandri Reservoir',
+      location: 'Palembang',
+      price: '891',
+      image: 'lib/images/location_thumb.png',
+    ),
+    const card.Card(
+      name: 'Nilandri Reservoir',
+      location: 'Palembang',
+      price: '891',
+      image: 'lib/images/location_thumb.png',
+    ),
+    const card.Card(
+      name: 'Nilandri Reservoir',
+      location: 'Palembang',
+      price: '891',
+      image: 'lib/images/location_thumb.png',
+    ),
+  ];
+  
+  void test() {
+    _cards[0].names;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,18 +145,9 @@ class _SearchState extends State<Search> {
                 crossAxisSpacing: 15,
                 mainAxisSpacing: 35,
                 crossAxisCount: 2,
-                children: [
-                  const card.Card(),
-                  const card.Card(),
-                  const card.Card(),
-                  const card.Card(),
-                  const card.Card(),
-                  const card.Card(),
-                  const card.Card(),
-                ],
+                children: _cards,
               ),
             ),
-            SizedBox(height: 20.0),
           ],
         ),
       ),
