@@ -82,7 +82,7 @@ class _SearchState extends State<Search> {
         padding: EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
           children: <Widget>[
-            SizedBox(height: 20.0),
+            // SizedBox(height: 20.0),
             Container(
               decoration: BoxDecoration(
                 color: Color(0xffF7F7F9),
@@ -148,10 +148,11 @@ class _SearchState extends State<Search> {
                 children: _cards,
               ),
             ),
+            SizedBox(height: 20.0),
           ],
         ),
       ),
-      bottomNavigationBar: const BottomNavigation(),
+      // bottomNavigationBar: const BottomNavigation(),
     );
   }
 }

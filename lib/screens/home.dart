@@ -39,7 +39,7 @@ class _HomeState extends State<Home> {
                   ),
                   SizedBox(width: 8.0),
                   Text(
-                    'Imanto',
+                    'Afiif Imanto',
                     style: TextStyle(
                       fontWeight: FontWeight.w500,
                       fontSize: 14.0,
@@ -214,7 +214,7 @@ class _HomeState extends State<Home> {
           ),
         ]
       ),
-      bottomNavigationBar: const BottomNavigation(),
+      // bottomNavigationBar: const BottomNavigation(),
     );
   }
 }

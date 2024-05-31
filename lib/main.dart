@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app/providers/screen_provider.dart';
 import 'package:travel_app/screens/home_page.dart';
-import './screens/intro.dart';
-import './screens/login.dart';
-import './screens/home.dart';
-import 'screens/search.dart';
+import 'package:travel_app/screens/profile.dart';
+import 'package:travel_app/screens/intro.dart';
+import 'package:travel_app/screens/login.dart';
+import 'package:travel_app/screens/home.dart';
+import 'package:travel_app/screens/search.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => ScreenProvider(),
+      child: const MyApp()
+    )
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -24,11 +32,17 @@ class MyApp extends StatelessWidget {
       // home: HomePage(),
       home: const Intro(),
       routes: {
-        '/intro' : (context) => const Intro(),
+        '/intro': (context) => const Intro(),
         '/login' : (context) => const Login(),
-        '/home' : (context) => const Home(),
-        '/search': (context) => const Search(),
-      },
+        '/main': (context) => const HomePage(),
+      }
+      // routes: {
+      //   '/intro' : (context) => const Intro(),
+      //   '/login' : (context) => const Login(),
+      //   '/home' : (context) => const Home(),
+      //   '/search': (context) => const Search(),
+      //   '/profile': (context) => const Profile(),
+      // },
     );
   }
 }

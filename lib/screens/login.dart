@@ -179,7 +179,7 @@ class _LoginState extends State<Login> {
                                 if(_username == null || _password == null) {
                                   return;
                                 }
-                                Navigator.pushNamedAndRemoveUntil(context, '/home', (route) => false);
+                                Navigator.pushNamedAndRemoveUntil(context, '/main', (route) => false);
                                 // Navigator.pushNamed(context, '/home');
                               }, 
                               style: ElevatedButton.styleFrom(
